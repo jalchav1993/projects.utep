@@ -1,0 +1,59 @@
+<!-- public/index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+
+    <title>Starter Node and Angular</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+		<!-- Angular Material style sheet -->
+		<link rel="stylesheet" href="libs/angular-material/angular-material.css">
+    <link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
+		<link rel="stylesheet" href="libs/ang-accordion/css/ang-accordion.css"> 
+		<link rel="stylesheet" href="libs/angular-material-icons/angular-material-icons.css"> 
+    <!-- JS -->
+    <script src="libs/angular/angular.js"></script>
+    <script src="libs/angular-route/angular-route.js"></script>
+		<script src="libs/angular-animate/angular-animate.js"></script>
+		<script src="libs/angular-aria/angular-aria.js"></script>
+		<script src="libs/angular-material/angular-material.js"></script>
+		<script src="libs/ang-accordion/js/ang-accordion.js"></script>
+		<script src="libs/angular-material-icons/angular-material-icons.js"></script>
+    <!-- ANGULAR CUSTOM -->
+    <script src="js/controllers/MainCtrl.js"></script>
+    <script src="js/controllers/NerdCtrl.js"></script>
+		<script src="js/controllers/AccountCtrl.js"></script>
+    <script src="js/services/NerdService.js"></script>
+		<script src="js/services/AccountService.js"></script>
+    <script src="js/appRoutes.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body ng-app="sampleApp" ng-controller="MainController" ng-cloak>
+  <div class="container">
+    <!-- HEADER -->
+		<div layout="column">
+		  <md-toolbar class="md-warn">
+		    <div class="md-toolbar-tools">
+		      <h2 class="md-flex">AdminDesk Tools</h2>
+		    </div>
+		  </md-toolbar>
+		  <md-content flex >
+				
+				  <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+					  <md-nav-item md-nav-href="/home" name="home">Home</md-nav-item>
+            <md-nav-item md-nav-href="/events" name="events">Events</md-nav-item>
+				    <md-nav-item md-nav-href="/accounts" name="accounts">Accounts</md-nav-item>
+				    <md-nav-item md-nav-href="/reports" name="reports">Reports</md-nav-item>
+				    <md-nav-item md-nav-href="/settings" name="settings">Settings</md-nav-item>
+				  </md-nav-bar>
+				
+		  </md-content>
+		</div>
+    <!-- ANGULAR DYNAMIC CONTENT -->
+    <div ng-view></div>
+  </div>
+</body>
+</html>

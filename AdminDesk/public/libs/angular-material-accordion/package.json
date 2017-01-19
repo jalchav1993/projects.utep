@@ -1,0 +1,85 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "angular-material-accordion",
+        "scope": null,
+        "escapedName": "angular-material-accordion",
+        "name": "angular-material-accordion",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/aexchv/Desktop/AdminDesk"
+    ]
+  ],
+  "_from": "angular-material-accordion@latest",
+  "_id": "angular-material-accordion@1.0.1",
+  "_inCache": true,
+  "_location": "/angular-material-accordion",
+  "_nodeVersion": "5.12.0",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/angular-material-accordion-1.0.1.tgz_1472222208587_0.13426951202563941"
+  },
+  "_npmUser": {
+    "name": "danielr18",
+    "email": "danielreinosodeveloper@gmail.com"
+  },
+  "_npmVersion": "3.8.6",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "angular-material-accordion",
+    "scope": null,
+    "escapedName": "angular-material-accordion",
+    "name": "angular-material-accordion",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/angular-material-accordion/-/angular-material-accordion-1.0.1.tgz",
+  "_shasum": "5d7e5b6eaf92ac98a6829bc5c85ff3457c4ff0c7",
+  "_shrinkwrap": null,
+  "_spec": "angular-material-accordion",
+  "_where": "/Users/aexchv/Desktop/AdminDesk",
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/uxman-sherwani/angular-accordion/issues"
+  },
+  "dependencies": {},
+  "description": "A simple angular directive for adding accordion UI element",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "5d7e5b6eaf92ac98a6829bc5c85ff3457c4ff0c7",
+    "tarball": "https://registry.npmjs.org/angular-material-accordion/-/angular-material-accordion-1.0.1.tgz"
+  },
+  "gitHead": "4331bbbbd81fbe442a02b7cf05adbeabc0ea1dab",
+  "homepage": "https://github.com/uxman-sherwani/angular-accordion#readme",
+  "keywords": [
+    "angular",
+    "accordion"
+  ],
+  "license": "ISC",
+  "main": "js/ang-accordion.js",
+  "maintainers": [
+    {
+      "name": "danielr18",
+      "email": "danielreinosodeveloper@gmail.com"
+    }
+  ],
+  "name": "angular-material-accordion",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uxman-sherwani/angular-accordion.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.1"
+}
