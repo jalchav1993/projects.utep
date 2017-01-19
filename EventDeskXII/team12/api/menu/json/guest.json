@@ -1,0 +1,9 @@
+[	
+	{"msg":"welcome, ", "accordionItems":[{"template": "My Events", 		"action":"myevents","route":"myeventsRt"},
+		{"template": "My Profile", "action":"myprofile","route":"myprofileRt"},
+		{"template": "Add Event", "action":"addevent","route":"myeventsRt"},
+		{"template": "Sign Out", "action":"signout","route":"eventsRt"}]},
+	{"template": "Events", "action":"events","route":"eventsRt"}, 
+	{"template": "About Us", "action":"about","route":"aboutRt"}, 
+	{"template":"Contact", "action":"contact","route":"contactRt"}
+]

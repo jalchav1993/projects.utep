@@ -1,0 +1,108 @@
+<style> 
+.md-select-menu-container {z-index: 1200;}
+
+</style>
+  <md-content md-theme="docs-dark" layout-gt-sm="row" layout-padding>
+		<div>
+			<h3>Registration</h3>
+    </div>
+  </md-content>
+  <md-content layout-padding>
+    <div>
+      <form name="userForm">
+				<div layout-gt-sm ="row">
+					<div style = 'background-color:{{$ctrl.state.cssClass}}'>
+						<p>
+							{{$ctrl.state.msgText}}
+						</p>
+					</div>
+				</div>
+	     	<div layout-gt-sm="row">
+		      <md-input-container class = "md-block"flex-gt-sm>
+		        <label>User Name</label>
+		        <input ng-model="$ctrl.user.userName" type="text"/>
+		      </md-input-container>
+		      <md-input-container class = "md-block" flex-gt-sm>
+		        <label>Password</label>
+		        <input ng-model="$ctrl.user.userPass" tyPe = "pass"/>
+		      </md-input-container>
+	     	</div>
+        <div layout-gt-sm="row">
+					<md-input-container>
+				  	<label>
+							User Type
+						</label>
+				    <md-select name="type" ng-model="$ctrl.user.userType" ng-change="$ctrl.selectChanged()" required>
+				    	<md-option value="admin">
+								Admin
+							</md-option>
+				      <md-option value="user">
+								User
+							</md-option>
+				    	<md-option value="guest">
+								Guest
+							</md-option>
+				  	</md-select>
+				  </md-input-container>
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>First name</label>
+            <input ng-model="$ctrl.user.firstName"/>
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Middle Initial</label>
+            <input ng-model="$ctrl.user.middleInit"/>
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Last Name</label>
+            <input ng-model="$ctrl.user.lastName"/>
+          </md-input-container>
+        </div>
+				<div layout-gt-sm="row">
+ 					<md-input-container class="md-block" flex-gt-sm>
+ 				  	<label>
+ 							Classification
+ 						</label>
+ 				    <md-select name="type" ng-model="$ctrl.user.userClass" ng-disabled="$ctrl.getIsDisabled()" required>
+ 				    	<md-option value="undergrad">
+ 								Undergraduate
+ 							</md-option>
+ 				      <md-option value="graduate">
+ 								Graduate
+ 							</md-option>
+ 				  	</md-select>
+ 				  </md-input-container>
+ 					<md-input-container class="md-block" flex-gt-sm>
+ 				  	<label>
+ 							Event Preference
+ 						</label>
+ 				    <md-select name="type" ng-model="$ctrl.user.eventPreference" ng-disabled="$ctrl.getIsDisabled()" required>
+ 				    	<md-option value="Career Events">
+ 								Career Events
+ 							</md-option>
+ 				      <md-option value="Volunteers">
+ 								Volunteers
+ 							</md-option>
+ 				      <md-option value="Hackaton">
+ 								Hackaton
+ 							</md-option>
+ 				  	</md-select>
+ 				  </md-input-container>
+					<md-input-container class="md-block" flex-gt-sm>
+	          <label>Phone Number</label>
+	          <input name="phone" ng-model="$ctrl.user.telephone" ng-pattern="/^[(][0-9]{3}[)] [0-9]{3}-[0-9]{4}$/" />
+	          <div ng-messages="userForm.phone.$error" ng-hide="showHints">
+	            <div ng-message="pattern">(###) ###-#### - Please enter a valid phone number.</div>
+	          </div>
+					</md-input-container>
+				</div>
+      </form>
+    </div>
+		<div>
+		  <md-button ng-click ="$ctrl.submitAddUserRequest()">
+							Submit
+			</md-button>
+			<md-button ng-click = "$ctrl.closeLogInDialog()">
+							Close
+			</md-button>
+		</div>
+  </md-content>

@@ -1,0 +1,113 @@
+<style>
+.diabled-class{
+	background-color:green;
+	color:white;
+}
+</style>
+<div>
+<md-card ng-repeat = "user in users">
+	<uib-accordion close-others="oneAtATime">
+	    <div uib-accordion-group class="panel-default" heading="{{user.userType}} {{user.userName}}">
+				<secion layout = "row">
+					<table class="table" flex>
+						<thead>
+							<tr>
+								<th>description</th>
+						  </tr>
+				    </thead>
+				    <tbody>
+				      <tr>
+								<th>Type</th>
+								<td>
+									<input ng-model = "user.userType" 
+														 ng-disabled = "isModified"
+														 ng-class="{'diabled-class':selected === user}"/>
+								</td>
+							</tr>
+							<tr>
+								<th>Username</th>
+								<td>
+									<input ng-model = "user.userName" 
+														 ng-disabled = "isModified"
+														 ng-class="{'diabled-class':selected === user}"/>
+								</td>
+							</tr>
+							<tr>
+								<th>Password</th>
+								<td>
+									<input ng-model = "user.userPass" 
+														 ng-disabled = "isModified"
+														 ng-class="{'diabled-class':selected === user}"/>
+								</td>
+							</tr>
+							<tr>
+						  	<th>Firstname</th>
+								<td>
+									<input ng-model = "user.firstName" 
+														 ng-disabled = "isModified"
+														 ng-class="{'diabled-class':selected === user}"/>
+								</td>
+							</tr>
+							<tr>
+						    <th>Middle Initial</th>
+								<td>
+									<input ng-model = "user.middleInit" 
+														ng-disabled = "isModified"
+														ng-class="{'diabled-class':selected === user}"/>
+								</td>
+							</tr>
+							<tr>
+								<th>Lastname</th>
+								<td>
+									<input ng-model = "user.lastName" 
+														ng-disabled = "isModified"
+														ng-class="{'diabled-class':selected === user}"/>
+								</td>
+							</tr>
+							<tr>
+						  	<th>Telephone</th>
+								<td>
+									<input ng-model = "user.telephone" 
+														 ng-disabled = "isModified"
+														 ng-class="{'diabled-class':selected === user}"/>
+								</td>
+							</tr>
+							<tr  ng-if = "user.userType==='student'">
+						    <th>Classification</th>
+								<td>
+									<input ng-model = "user.userClass" 									
+														 ng-disabled = "isModified"
+														 ng-class="{'diabled-class':selected === user}"/>
+								</td>
+							</tr>
+							<tr  ng-if = "user.userType==='student'">
+								<th>Event Preference</th>
+								<td>
+									<input ng-model = "user.eventPreference" 
+														 ng-disabled = "isModified"
+														 ng-class="{'diabled-class':selected === user}"/>
+								</td>
+							</tr>
+							<tr>
+								<th>Options</th>
+								<td>
+									<span style = "display:inline-block">
+										<button class = 'btn btn-default' ng-click = 'delete(user.userType, user.userName)'>
+											delete
+										</button>
+									</span>
+									<span style = "display:inline-block">
+										<button class = 'btn btn-default' ng-if = "isModified" ng-click = 'modify(user)'>modify</button>
+									</span>
+									<span style = "display:inline-block">
+										<button class = 'btn btn-default' ng-if = "!isModified" ng-click = 'save(user)'>save</button>
+									</span>
+								</td>
+				      </tr>
+				    </tbody>
+				  </table>
+				</section>
+	    </div>
+	</uib-accordion>
+</md-card>
+</div>

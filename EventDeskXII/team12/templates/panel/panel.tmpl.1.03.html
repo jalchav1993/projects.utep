@@ -1,0 +1,38 @@
+<div layout="column" ng-cloak>
+  <md-content layout-padding>
+		<div style = 'background-color:{{$ctrl.state.cssClass}}'>
+			<p>
+				{{$ctrl.state.msgText}}
+			</p>
+		</div>
+    <form name="projectForm">
+      <md-input-container class="md-block">
+        <label>User Name</label>
+        <input ng-model= '$ctrl.input.user' required type="text" name="formUser" inlength="10" maxlength="100" />
+        <div ng-messages="projectForm.formUser.$error" role="alert">
+          <div ng-message-exp="['required', 'minlength', 'maxlength']">
+            Your username must be between 10 and 100 characters.
+          </div>
+        </div>
+      </md-input-container>
+      <md-input-container class="md-block">
+        <label>User Password</label>
+        <input ng-model= '$ctrl.input.pass' required type="password" name="formPwd" inlength="10" maxlength="100"/>
+        <div ng-messages="projectForm.formPwd.$error" role="alert">
+          <div ng-message-exp="['required']">
+            Password Needed
+          </div>
+        </div>
+      </md-input-container>
+      <div>
+        <md-button ng-click ="$ctrl.submitSignInRequest()">
+					Sign In
+				</md-button>
+				<md-button ng-click = "$ctrl.closeLogInDialog()">
+					Close
+				</md-button>
+      </div>
+    </form>
+  </md-content>
+</div>
+

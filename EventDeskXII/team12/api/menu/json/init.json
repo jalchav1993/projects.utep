@@ -1,0 +1,6 @@
+[
+	{"msg":"welcome, Sign In here", "accordionItems":[{"template":"Sign In","action":"signin","route":"eventsRt"}]},
+	{"template": "Events", "action":"events","route":"eventsRt"}, 
+	{"template": "About Us", "action":"about","route":"aboutRt"}, 
+	{"template":"Contact", "action":"contact","route":"contactRt"}
+]

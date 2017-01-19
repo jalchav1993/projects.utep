@@ -1,0 +1,28 @@
+/*
+ * Author: Jesus Chavez
+ * UTEP Theme
+ */
+body {
+	margin-left: 40px;
+	margin-right: 40px;
+}
+.UTEP-theme-color-blue {
+    background-color: #002147;
+}
+.UTEP-theme-color-orange {
+    background-color: #FF5600;
+		color:#FF5600;
+}
+.green-login-success{
+	background-color:#90EE90;
+}
+.red-login-denied{
+	background-color: 'red';
+}
+div.panel-group{
+	margin-bottom:0px;
+	margin:0px;
+}
+md-sidenav, md-backdrop {
+position: fixed !important;
+}
