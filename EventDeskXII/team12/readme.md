@@ -1,4 +1,4 @@
-//todo
-//marry angulax and eventDesk 0.1
-//route menu
-//make route destinations dynamic?
+### AUTHOR
+```JESUS CHAVEZ ```
+### Contex
+```The team was interdisciplinary, I was the only programmer. ```
